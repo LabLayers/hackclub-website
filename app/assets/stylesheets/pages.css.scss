@@ -17,7 +17,7 @@ $include-html-global-classes: false;
   font-weight: bold;
 }
 
-#home-map-jumbotron {
+/* #home-map-jumbotron {
   height: 200px;
 
   @media #{$medium-up} {
@@ -194,7 +194,7 @@ $include-html-global-classes: false;
   h3 {
     color: white;
   }
-}
+} */
 
 .team-profiles {
   margin-top: 10px;
@@ -250,7 +250,7 @@ $include-html-global-classes: false;
   }
 }
 
-.join-us {
+/* .join-us {
   @extend .colored-section;
   background-color: $hackclub-green;
 
@@ -341,7 +341,7 @@ $include-html-global-classes: false;
     color: $hackclub-purple;
     background: white;
   }
-}
+} */
 
 .footer {
   background-color: $hackclub-black;
