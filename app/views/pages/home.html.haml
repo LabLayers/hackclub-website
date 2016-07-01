@@ -1,3 +1,169 @@
+#introduction
+  .row
+    %h1 Hack Club helps high schoolers start awesome after-school coding clubs.
+    %p.links
+      = link_to 'Start a Hack Club!', apply_path, class: 'button large outline-outward button-start-a-club'
+      = link_to 'About Us ➡', team_path, class: ''
+      = link_to 'Donate ➡', donate_path, class: ''
+#ingredients
+  %p.subheading
+    Help us inspire the next generation of coders by starting a Hack Club!
+  .row
+    .large-3.medium-6.columns
+      .card
+        %h3.card-heading Leader
+        %p It takes only one passionate student to start a hack club - that could be you!
+        = link_to 'Start a Hack Club! ➡', apply_path, class: 'button card-button'
+    .large-3.medium-6.columns
+      .card
+        %h3.card-heading Students
+        %p Anyone who is interested in learning how to build cool apps & games are welcome!
+        = link_to 'Spreading the Word ➡', '#', class: 'button card-button'
+    .large-3.medium-6.columns
+      .card
+        %h3.card-heading Venue
+        %p We work with your school and our partners to get it the support it needs
+        = link_to 'Securing a Venue ➡', '#', class: 'button card-button'
+    .large-3.medium-6.columns
+      .card
+        %h3.card-heading Resources
+        %p We’ll provide the resources to run your club, from workshops to mentors!
+        = link_to 'See the Resources ➡', '#', class: 'button card-button'
+#map
+  .row
+    %h1 Meet the Hack Clubs
+    %p We are an international movement encompassing <br> <b>82 schools</b> across <b>16 states</b> and <b>7 countries</b>.
+  .row-larger
+    %ul.tabs{'data-tab' => ''}
+      %li.tab-title.active
+        = link_to 'United States', '#map-usa'
+      %li.tab-title
+        = link_to 'Worldwide', '#map-international'
+    .tabs-content
+      #map-usa.content.active
+        %p This is the first panel of the basic tab example. You can place all sorts of content here including a grid.
+      #map-international.content
+        %p This is the second panel of the basic tab example. This is the second panel of the basic tab example.
+
+#diversity
+  .row
+    %h1 Hack Clubs are diverse.
+    %p In the US alone, 3 in 4 high schools don’t offer any coding classes and we’re setting out to help students change that. We think coding is a superpower that anyone can learn and we want to provide every student, regardless of ethnicity, gender, or socioeconomic status, the opportunity.
+  %p.links.margin-bottom
+    = link_to 'Our Diversity in Numbers ➡', '#'
+  .row.row-larger
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?1'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?2'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?3'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?1'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?2'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+    %a.medium-4.small-6.columns.club-photo{'href' => '#'}
+      =image_tag 'http://unsplash.it/800/400?3'
+      .club-overlay
+        %h5 George Washington High School
+        %p Philadelphia, PA
+        %u Visit Website
+#workshops
+  .row
+    %h1 Workshops
+    %p We have an free and open curriculum with 85+ simple-to-follow walkthroughs designed with students in mind. <b>Jump in to our most popular workshops:</b>
+    %p.links.margin-bottom
+      = link_to 'For First Time Coders ➡', 'https://github.com/hackclub/hackclub/tree/master/workshops#initial-track'
+      = link_to 'Browse All Workshops ➡', 'https://github.com/hackclub/hackclub/tree/master/workshops#the-list'
+    .row
+      .large-3.medium-6.columns
+        .card
+          .card-image{'style' => 'background-image:url(https://github.com/hackclub/hackclub/raw/master/workshops/personal_website/img/final_screenshot.png)'}
+          %h4.card-heading Build a Website
+          %p Learn how build a website showcasing yourself.
+          = link_to 'Get Started ➡', 'https://github.com/hackclub/hackclub/blob/master/workshops/personal_website/README.md', class: 'button card-button card-button-black'
+      .large-3.medium-6.columns
+        .card
+          .card-image{'style' => 'background-image:url(https://github.com/hackclub/hackclub/raw/master/workshops/soccer/img/5_mini.gif)'}
+          %h4.card-heading Soccer Game
+          %p Create a fun single player game in Javascript.
+          = link_to 'Get Started ➡', 'https://github.com/hackclub/hackclub/tree/master/workshops/soccer', class: 'button card-button card-button-black'
+      .large-3.medium-6.columns
+        .card
+          .card-image{'style' => 'background-image:url(https://github.com/hackclub/hackclub/raw/master/workshops/swiper/img/box.gif)'}
+          %h4.card-heading Swiper!
+          %p Build an addictive iPhone game using Swift.
+          = link_to 'Get Started ➡', 'https://github.com/hackclub/hackclub/tree/master/workshops/swiper', class: 'button card-button card-button-black'
+      .large-3.medium-6.columns
+        .card
+          .card-image{'style' => 'background-image:url(https://github.com/hackclub/hackclub/raw/master/workshops/that_was_easy/img/easy_screenshot.png)'}
+          %h4.card-heading Easy Button
+          %p Build a dead simple Easy button, complete with audio!
+          = link_to 'Get Started ➡', 'https://github.com/hackclub/hackclub/tree/master/workshops/that_was_easy', class: 'button card-button card-button-black'
+#resources
+  .row
+    %h1 Resources
+    %p.margin-bottom All of this is free to your school thanks to our funders & partners!
+  .row.row-resources.margin-bottom
+    .large-2.medium-4.columns.show-for-large-up
+      =image_tag 'http://placehold.it/200/200'
+    .large-4.medium-6.columns
+      %h5 Perks
+      Our partners provides hack club with free swag and access to online services.
+      %br
+      %br
+      = link_to 'Hack Club Perks ➡', '#', class: 'link'
+    .large-2.medium-4.columns.show-for-large-up
+      =image_tag 'http://placehold.it/200/200'
+    .large-4.medium-6.columns
+      %h5 Community
+      You’ll join a network of friends and schools and stuff and stuff
+      %br
+      %br
+      = link_to 'Join the Slack ➡', 'https://slack.hackclub.com/', class: 'link'
+  .row.row-resources
+    .large-3.medium-3.columns
+      &nbsp;
+    .large-2.medium-4.columns.show-for-large-up
+      =image_tag 'http://placehold.it/200/200'
+    .large-4.medium-6.columns
+      %h5 One-On-One Support
+      We work with your school and our partners to get it the support it needs
+      %br
+      %br
+      = link_to 'Get Help ➡', '#', class: 'link'
+    .large-3.medium-3.columns
+      &nbsp;
+#start
+  .row
+    %h1 Start a Hack Club!
+    %h3 Interested in bringing a coding club to your school?
+    %h3 All it takes to start a Hack Club is you!
+    %p.links
+      = link_to 'Start a Hack Club!', apply_path, class: 'button large outline-outward button-start-a-club'
+    %p.links
+      = link_to 'About Us ➡', team_path
+      = link_to 'Donate ➡', donate_path
 -# .introduction.main-section
 -#   .row
 -#     .small-12.columns

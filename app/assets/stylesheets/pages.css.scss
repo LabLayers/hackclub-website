@@ -11,35 +11,27 @@ $include-html-global-classes: false;
   font-size: rem-calc(28);
 }
 
+h1 {
+  font-weight: bold;
+}
+
 .hackclub-logo {
   font-family: "Amaranth", "Open Sans", "Helvetica Neue",  sans-serif;
   font-size: 100%;
   font-weight: bold;
 }
 
-/* #home-map-jumbotron {
-  height: 200px;
-
-  @media #{$medium-up} {
-    height: 400px;
-  }
-
-  @media #{$large-up} {
-    height: 500px;
-  }
-}
-
 .colored-section {
   color: $hackclub-white;
 
-  h1 {
-    color: $hackclub-white;
+  h1, h2, h3, h4, a {
+    color: inherit;
   }
 }
 
 .main-section {
   padding: 50px 0 50px 0;
-  text-align: center;
+  // text-align: center;
 
   p {
     font-size: rem-calc(20);
@@ -53,13 +45,269 @@ $include-html-global-classes: false;
 .small-section {
   @extend .main-section;
   padding: 20px 0 20px 0;
-
   @media #{$medium-up} {
     padding: 50px 0 50px 0;
   }
 }
 
-.introduction {
+.row-larger {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+.row-fullwidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.links a:not(.button) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.card {
+  text-align: center;
+  background: $hackclub-white;
+  color: $hackclub-black;
+
+  .card-image {
+    display: block;
+    height: 8rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: $hackclub-blue;
+  }
+
+  h1, h2, h3, h4, h5 {
+    padding-top: .75rem;
+  }
+
+  .card-heading {
+    font-weight: bold;
+  }
+
+  p {
+    margin: .75rem .5rem;
+    font-size: .85rem!important;
+    @media #{$medium-up} {
+      min-height: 4rem;
+    }
+  }
+
+  .card-button {
+    display: block;
+    margin: 0;
+    background: $hackclub-red;
+    color: $hackclub-white;
+    &:hover {
+      background: scale-color($hackclub-red, $lightness: -14%)!important;
+    }
+  }
+
+  .card-button-black {
+    background: $hackclub-black;
+    color: $hackclub-white!important;
+    &:hover {
+      background: scale-color($hackclub-black, $lightness: -14%)!important;
+    }
+  }
+}
+
+#introduction {
+  @extend .main-section;
+  @extend .colored-section;
+  background: $hackclub-red;
+  padding-top: 25px;
+  @media #{$medium-up} {
+    padding-top: 75px;
+  }
+
+  h1 {
+    max-width: 650px;
+    font-weight: bold;
+    // font-size: 3rem;
+    line-height: 1.35em;
+    color: inherit;
+    @media #{$large-up} {
+      max-width: 800px;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.button-start-a-club {
+  background: $hackclub-red!important;
+  color: $white!important;
+  &:hover {
+    background: scale-color($hackclub-red, $lightness: -14%)!important;
+  }
+}
+
+#ingredients {
+  @extend .main-section;
+  padding: 1.5rem 0;
+  background: $gainsboro;
+
+  .subheading {
+    text-align: center;
+    font-size: 1.75rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+}
+
+#map {
+  @extend .main-section;
+  text-align: center;
+
+  .tabs {
+
+    .tab-title {
+      float: initial;
+      display: inline-block;
+
+      a {
+        transition: 150ms all linear;
+      }
+    }
+
+    .tab-title.active a {
+        background: $hackclub-red;
+        color: $white;
+    }
+  }
+}
+
+#diversity {
+  @extend .main-section;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.club-photo {
+  padding: 0;
+  position: relative;
+
+  img {
+    display: block;
+    margin: 0;
+  }
+
+  .club-overlay {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: .5rem 1rem .75rem;
+    text-align: center;
+    line-height: 1em;
+    text-decoration: none;
+    background: $hackclub-red;
+    color: $hackclub-white;
+    transition: 200ms all ease;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+
+    h5, strong {
+      margin-bottom: 0;
+      color: inherit;
+      font-weight: bold;
+      font-size: .85rem!important;
+    }
+
+    p, u {
+      margin-bottom: 0;
+      font-size: .85rem!important;
+    }
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .0;
+    background: $hackclub-red;
+    transition: 150ms all linear;
+  }
+
+  &:hover {
+
+    .club-overlay {
+      transform: rotateX(0deg);
+    }
+
+    &:after {
+      opacity: .5;
+    }
+
+  }
+}
+
+#workshops {
+  @extend .main-section;
+  @extend .colored-section;
+  background: $hackclub-red;
+  text-align: center;
+}
+
+#resources {
+  @extend .main-section;
+  background: linear-gradient($gainsboro,$gainsboro,$hackclub-white);
+  text-align: center;
+
+  .row-resources {
+    text-align: left;
+
+    h3, h4, h5 {
+      font-weight: bold;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}
+
+#start {
+  @extend .main-section;
+  text-align: center;
+}
+
+/* #home-map-jumbotron {
+  height: 200px;
+
+  @media #{$medium-up} {
+    height: 400px;
+  }
+
+  @media #{$large-up} {
+    height: 500px;
+  }
+} */
+
+/* .introduction {
   @extend .colored-section;
   background-image: asset_url("group_photo.jpg");
   background-size: cover;
