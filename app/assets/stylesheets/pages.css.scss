@@ -295,7 +295,7 @@ h1 {
   text-align: center;
 }
 
-/* #home-map-jumbotron {
+#home-map-jumbotron {
   height: 200px;
 
   @media #{$medium-up} {
@@ -303,9 +303,9 @@ h1 {
   }
 
   @media #{$large-up} {
-    height: 500px;
+    height: 550px;
   }
-} */
+}
 
 /* .introduction {
   @extend .colored-section;
