@@ -3,6 +3,10 @@
 $include-html-global-classes: false;
 @import "foundation/components/global";
 
+h1, h2, h3, h4 {
+  letter-spacing: -1px;
+}
+
 .title {
   font-family: "Open Sans", "Helvetica Neue",  sans-serif;
 }
