@@ -11,6 +11,16 @@
 
     internal:
       id: 'home-map-jumbotron'
+
+  # google.maps.event.addDomListener document.getElementById('focus-map-usa'), 'click', ->
+  #   this.setCenter new (google.maps.LatLng)(40, -95)
+  #   this.setZoom 4
+  #   return
+  # google.maps.event.addDomListener document.getElementById('focus-map-international'), 'click', ->
+  #   this.setCenter new (google.maps.LatLng)(32, 0)
+  #   this.setZoom 2
+  #   return
+
     ->
       handler.addMarkers markersJSON
 
