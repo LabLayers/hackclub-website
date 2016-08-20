@@ -16,6 +16,12 @@ $include-html-global-classes: false;
   opacity: 1;
 }
 
+@media #{$medium-only} {
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    padding: 0 10px;
+  }
+}
+
 h1, h2, h3, h4 {
   color: inherit;
   letter-spacing: -1px;
@@ -183,7 +189,7 @@ h1 {
       }
     }
   }
-  
+
   @media #{$medium-up} {
     &.card-has-hover {
       .card-image-fx {
