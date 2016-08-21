@@ -526,7 +526,6 @@ a {
   a {
     text-decoration: underline;
     color: inherit;
-    display: initial;
   }
 
   p {
@@ -557,143 +556,6 @@ a {
     height: 550px;
   }
 }
-
-/* .introduction {
-  @extend .colored-section;
-  background-image: asset_url("group_photo.jpg");
-  background-size: cover;
-  padding: 25px 0;
-  text-align: left;
-
-  @media #{$medium-up} {
-    padding: 100px 0;
-  }
-
-  .heading {
-    font-size: rem-calc(28);
-    font-weight: bold;
-
-    @media #{$medium-up} {
-      font-size: rem-calc(42);
-    }
-
-    @media #{$large-up} {
-      font-size: rem-calc(56);
-    }
-  }
-
-  .subheading {
-    font-size: rem-calc(18);
-    margin-top: 25px;
-
-    @media #{$medium-up} {
-      font-size: rem-calc(32);
-    }
-  }
-
-  .start-a-club {
-    background: $hackclub-red;
-    color: $hackclub-white;
-    margin-left: 0;
-    margin-top: 30px;
-  }
-
-  .outline-outward:before {
-    border-color: $hackclub-red;
-  }
-}
-
-.testimonial {
-  @extend .colored-section;
-  background-image: asset_url("testimonial_background.jpg");
-  background-size: cover;
-  padding: 25px 0;
-  text-align: left;
-
-  @media #{$medium-up} {
-    padding: 100px 0;
-  }
-}
-
-.impact {
-  @extend .colored-section;
-  background-color: $hackclub-orange;
-
-  .metric {
-    .stat {
-      font-weight: bold;
-      font-size: rem-calc(48);
-      margin-bottom: 0;
-
-      @media #{$medium} {
-        font-size: rem-calc(72);
-      }
-
-      @media #{$large} {
-        font-size: rem-calc(84);
-      }
-    }
-
-    .stat-desc {
-      font-size: rem-calc(24);
-      margin-bottom: rem-calc(6);
-
-      @media #{$medium-up} {
-        font-size: rem-calc(28);
-      }
-    }
-
-    .stat-comparison {
-      color: $hackclub-white;
-      font-size: rem-calc(12);
-    }
-  }
-}
-
-.publications {
-  background: $hackclub-black;
-  padding: 5px 0;
-
-  @media #{$medium-up} {
-    padding: 25px 0;
-  }
-
-  .publication {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 100px;
-    opacity: 0.6;
-    transition: 0.25s;
-
-    @media #{$medium-up} {
-      height: 175px;
-    }
-
-    a > img {
-      width: 75px;
-
-      @media #{$medium-up} {
-        width: 175px;
-      }
-    }
-  }
-
-  .publication:hover {
-    opacity: 1;
-  }
-}
-
-.description {
-  background-color: $hackclub-blue;
-  text-align: left;
-  color: white;
-
-  h3 {
-    color: white;
-  }
-} */
 
 .team-profiles {
   margin-top: 10px;
@@ -749,35 +611,6 @@ a {
   }
 }
 
-/* .join-us {
-  @extend .colored-section;
-  background-color: $hackclub-green;
-
-  h1 {
-    font-size: rem-calc(48);
-    margin-bottom: 15px;
-
-    @media #{$medium-up} {
-      font-weight: normal;
-      font-size: rem-calc(58);
-    }
-  }
-
-  .button {
-    background-color: $hackclub-white;
-    color: scale-color($hackclub-green, $lightness: -10%);
-    font-size: rem-calc(20);
-
-    @media #{$medium-up} {
-      font-size: rem-calc(24);
-    }
-  }
-
-  .outline-outward:before {
-    border-color: $hackclub-white;
-  }
-} */
-
 #supporters {
   @extend .main-section;
   text-align: center;
@@ -791,6 +624,10 @@ a {
     margin-top: 30px;
     list-style-type: none;
 
+    a {
+      display: initial;
+    }
+    
     img {
       margin-bottom: 2em;
       max-height: 100%;
