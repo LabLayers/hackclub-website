@@ -62,7 +62,7 @@ a {
 }
 
 .main-section {
-  padding: 25px 0 25px 0;
+  padding: 25px 5px 25px 5px;
   // text-align: center;
 
   // @media $small-down {
@@ -71,7 +71,7 @@ a {
     }
   // }
   @media #{$medium-up} {
-    padding: 50px 0 50px 0;
+    padding: 50px 5px 50px 5px;
     p {
       font-size: rem-calc(20);
     }
@@ -122,7 +122,8 @@ a {
   text-align: center;
   background: $hackclub-white;
   color: $hackclub-black;
-
+  margin-bottom: 1em;
+  
   .card-image {
     display: block;
     height: 8rem;
@@ -245,7 +246,7 @@ a {
 #introduction {
   @extend .main-section;
   @extend .colored-section;
-  // @media $medium-down {
+  // @media ${medium-down} {
     text-align: center;
     background-image: url(/assets/photos/december_hack_night.jpg);
     background-size: cover;
@@ -362,7 +363,7 @@ a {
     }
   }
 
-  @media #{$medium-up} {
+  @media #{$large-up} {
 
     .card-heading-longer {
       min-height: 3.25em!important;
@@ -627,7 +628,7 @@ a {
     a {
       display: initial;
     }
-    
+
     img {
       margin-bottom: 2em;
       max-height: 100%;
