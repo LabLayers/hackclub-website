@@ -119,7 +119,10 @@
     %p The impact of Hack Club reaches far and wide across the world, with <br> <b>82 schools</b> across <b>16 states</b> and <b>7 countries</b>.
     -# %p.links.margin-bottom
       = link_to 'Our Diversity in Numbers ➡', '#'
-
+  .tabs-content
+    -# Filler, no content here
+    #map-usa.content.active
+    #map-international.content
   .row-larger.margin-bottom
     %ul.tabs{'data-tab' => ''}
       %li.tab-title.active
@@ -127,11 +130,6 @@
       %li.tab-title
         = link_to 'Worldwide', '#map-international', id: 'focus-map-international'
   #home-map-jumbotron
-  .tabs-content
-    /* Filler */
-    #map-usa.content.active
-    #map-international.content
-
 #workshops
   .row
     %h1 Free Workshops

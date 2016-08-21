@@ -12,28 +12,29 @@
     internal:
       id: 'home-map-jumbotron'
 
-  # google.maps.event.addDomListener document.getElementById('focus-map-usa'), 'click', ->
-  #   this.setCenter new (google.maps.LatLng)(40, -95)
-  #   this.setZoom 4
-  #   return
-  # google.maps.event.addDomListener document.getElementById('focus-map-international'), 'click', ->
-  #   this.setCenter new (google.maps.LatLng)(32, 0)
-  #   this.setZoom 2
-  #   return
+    google.maps.event.addDomListener document.getElementById('focus-map-usa'), 'click', ->
+      handler.getMap().setCenter new (google.maps.LatLng)(40, -95)
+      handler.getMap().setZoom 4
+      return
+    google.maps.event.addDomListener document.getElementById('focus-map-international'), 'click', ->
+      handler.getMap().setCenter new (google.maps.LatLng)(32, 0)
+      handler.getMap().setZoom 2
+      return
 
     ->
       handler.addMarkers markersJSON
 
   $ ->
-  $('a[href*="#"]:not([href="#"])').click ->
-    if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') and location.hostname == @hostname
-      target = $(@hash)
-      target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
-      if target.length
-        $('html, body').animate { scrollTop: target.offset().top }, 1000
-        return false
+    $('a[href*="#"]:not([href="#"]):not([href="#map-usa"]):not([href="#map-international"])').click ->
+      target = undefined
+      if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') and location.hostname == @hostname
+        target = $(@hash)
+        target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
+        if target.length
+          $('html, body').animate { scrollTop: target.offset().top }, 1000
+          return false
+      return
     return
-  return
 
 @['pages#sponsor'] = (data) ->
   handler = Gmaps.build('Google')
